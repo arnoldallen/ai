@@ -10,13 +10,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             overflow-x: hidden;
         }
-
         /* Navigation */
         nav {
             position: fixed;
@@ -27,7 +25,6 @@
             z-index: 1000;
             padding: 1.5rem 5%;
         }
-
         nav ul {
             list-style: none;
             display: flex;
@@ -49,22 +46,19 @@
         .logo .division {
             font-size: 0.65rem;
             font-weight: normal;
-            color: #e2e8f0; /* off-white */
+            color: #e2e8f0;
             margin-top: 0.15rem;
             letter-spacing: 0.02em;
         }
-
         nav ul li a {
             color: white;
             text-decoration: none;
             margin-left: 2rem;
             transition: color 0.3s;
         }
-
         nav ul li a:hover {
             color: #60a5fa;
         }
-
         /* Hero Section with Parallax */
         .hero {
             height: 100vh;
@@ -75,7 +69,6 @@
             overflow: hidden;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
-
         .hero-bg {
             position: absolute;
             top: 0;
@@ -87,7 +80,6 @@
                 radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
             transform: translateZ(0);
         }
-
         .hero-content {
             position: relative;
             text-align: center;
@@ -95,21 +87,18 @@
             z-index: 2;
             padding: 2rem;
         }
-
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s forwards 0.3s;
         }
-
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             opacity: 0;
             animation: fadeInUp 1s forwards 0.6s;
         }
-
         .cta-button {
             display: inline-block;
             padding: 1rem 2.5rem;
@@ -122,19 +111,16 @@
             opacity: 0;
             animation: fadeInUp 1s forwards 0.9s;
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
-
         /* Parallax Sections */
         .parallax-section {
             position: relative;
             padding: 8rem 5%;
             overflow: hidden;
         }
-
         .parallax-bg {
             position: absolute;
             top: 0;
@@ -145,32 +131,27 @@
             background-position: center;
             transform: translateZ(0);
         }
-
         .content {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
             z-index: 2;
         }
-
         /* Services Section */
         .services {
             background: white;
         }
-
         .services h2 {
             font-size: 3rem;
             text-align: center;
             margin-bottom: 4rem;
             color: #0f172a;
         }
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .service-card {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 2.5rem;
@@ -179,23 +160,40 @@
             border: 1px solid #e2e8f0;
             cursor: pointer;
         }
-
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .service-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+        }
         .service-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin: 0;
             color: #1e40af;
         }
-
         .service-card p {
             color: #475569;
             line-height: 1.6;
         }
-
         /* Modal Overlay */
         .modal-overlay {
             position: fixed;
@@ -213,12 +211,10 @@
             visibility: hidden;
             transition: opacity 0.4s, visibility 0.4s;
         }
-
         .modal-overlay.active {
             opacity: 1;
             visibility: visible;
         }
-
         .modal-content {
             background: white;
             border-radius: 30px;
@@ -231,11 +227,9 @@
             transition: transform 0.4s;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
         }
-
         .modal-overlay.active .modal-content {
             transform: scale(1);
         }
-
         .modal-header {
             background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
@@ -243,17 +237,14 @@
             border-radius: 30px 30px 0 0;
             position: relative;
         }
-
         .modal-header h3 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
-
         .modal-header p {
             font-size: 1.1rem;
             opacity: 0.9;
         }
-
         .close-button {
             position: absolute;
             top: 2rem;
@@ -271,19 +262,15 @@
             justify-content: center;
             transition: background 0.3s;
         }
-
         .close-button:hover {
             background: rgba(255, 255, 255, 0.3);
         }
-
         .modal-body {
             padding: 3rem;
         }
-
         .modal-section {
             margin-bottom: 2.5rem;
         }
-
         .modal-section h4 {
             font-size: 1.8rem;
             color: #1e40af;
@@ -291,7 +278,6 @@
             display: flex;
             align-items: center;
         }
-
         .modal-section h4:before {
             content: "";
             width: 4px;
@@ -300,12 +286,10 @@
             margin-right: 1rem;
             border-radius: 2px;
         }
-
         .modal-section ul {
             list-style: none;
             padding-left: 0;
         }
-
         .modal-section li {
             padding: 1rem 0;
             position: relative;
@@ -314,11 +298,9 @@
             line-height: 1.6;
             border-bottom: 1px solid #e2e8f0;
         }
-
         .modal-section li:last-child {
             border-bottom: none;
         }
-
         .modal-section li:before {
             content: "✓";
             position: absolute;
@@ -334,12 +316,10 @@
             align-items: center;
             justify-content: center;
         }
-
         /* Contact Form Styles */
         .form-group {
             margin-bottom: 1.5rem;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
@@ -347,7 +327,6 @@
             font-weight: 600;
             font-size: 0.95rem;
         }
-
         .form-group input,
         .form-group select,
         .form-group textarea {
@@ -359,7 +338,6 @@
             font-family: inherit;
             transition: border-color 0.3s, box-shadow 0.3s;
         }
-
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
@@ -367,18 +345,15 @@
             border-color: #3b82f6;
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
-
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
         }
-
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
         }
-
         .submit-button {
             width: 100%;
             padding: 1rem;
@@ -391,26 +366,21 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .submit-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
         }
-
         .submit-button:active {
             transform: translateY(0);
         }
-
         .form-success {
             display: none;
             text-align: center;
             padding: 2rem;
         }
-
         .form-success.active {
             display: block;
         }
-
         .success-icon {
             width: 80px;
             height: 80px;
@@ -423,32 +393,27 @@
             font-size: 3rem;
             color: white;
         }
-
         @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
             }
         }
-
         /* Expertise Section */
         .expertise {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
         }
-
         .expertise h2 {
             font-size: 3rem;
             text-align: center;
             margin-bottom: 4rem;
         }
-
         .expertise-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             text-align: center;
         }
-
         .expertise-item {
             padding: 2rem;
             background: rgba(255, 255, 255, 0.05);
@@ -458,72 +423,60 @@
             transition: transform 0.3s, background 0.3s;
             cursor: pointer;
         }
-
         .expertise-item:hover {
             transform: scale(1.05);
             background: rgba(255, 255, 255, 0.1);
         }
-
         .expertise-item.active {
             background: rgba(96, 165, 250, 0.15);
             border-color: rgba(96, 165, 250, 0.3);
         }
-
         .expertise-item h3 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
             color: #60a5fa;
         }
-
         .expertise-details {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-in-out, margin-top 0.5s ease-in-out;
             margin-top: 0;
         }
-
         .expertise-details.expanded {
             max-height: 500px;
             margin-top: 1.5rem;
         }
-
         .expertise-details ul {
             list-style: none;
             padding-left: 0;
         }
-
         .expertise-details li {
             padding: 0.5rem 0;
             color: #e2e8f0;
             position: relative;
             padding-left: 1.5rem;
         }
-
         .expertise-details li:before {
             content: "→";
             position: absolute;
             left: 0;
             color: #60a5fa;
         }
-
         /* Contact Section */
         .contact {
             background: white;
             text-align: center;
         }
-
         .contact h2 {
             font-size: 3rem;
             margin-bottom: 2rem;
             color: #0f172a;
         }
-
         .contact p {
             font-size: 1.2rem;
             margin-bottom: 3rem;
             color: #475569;
         }
-
         .contact-button {
             display: inline-block;
             padding: 1rem 3rem;
@@ -534,12 +487,10 @@
             font-size: 1.1rem;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .contact-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(15, 23, 42, 0.4);
         }
-
         /* Footer */
         footer {
             background: #0f172a;
@@ -547,7 +498,6 @@
             text-align: center;
             padding: 2rem;
         }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -558,7 +508,6 @@
                 transform: translateY(0);
             }
         }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -596,7 +545,6 @@
             </div>
         </ul>
     </nav>
-
     <section class="hero">
         <div class="hero-bg" id="heroBg"></div>
         <div class="hero-content">
@@ -605,39 +553,92 @@
             <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </section>
-
     <section class="parallax-section services" id="services">
         <div class="content">
             <h2>Our Services</h2>
             <div class="service-grid">
                 <div class="service-card" onclick="openModal(0)">
-                    <h3>Custom Software/Tool Development</h3>
-                    <p>Build a focused custom application that solves specific operational needs without paying for unused features in off-the-shelf software.</p>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Custom Software/Tool Development</h3>
+                    </div>
+                    <p>Description here...</p>
                 </div>
                 <div class="service-card" onclick="openModal(1)">
-                    <h3>Data Design & Analytics</h3>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3>Data Design & Analytics</h3>
+                    </div>
                     <p>Design a practical data foundation so operations can use AI for anomaly detection, efficiency, and forecasting</p>
                 </div>
                 <div class="service-card" onclick="openModal(2)">
-                    <h3>Automation</h3>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                        </div>
+                        <h3>Automation</h3>
+                    </div>
                     <p>Automate processes and decisions to cut costs and improve consistency.</p>
                 </div>
                 <div class="service-card" onclick="openModal(3)">
-                    <h3>Workforce Augmentation</h3>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Workforce Augmentation</h3>
+                    </div>
                     <p>Evolve your team with AI tools that enhance decision-making, capture knowledge, and support operations.</p>
                 </div>
                 <div class="service-card" onclick="openModal(4)">
-                    <h3>Anomaly Detection</h3>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                <line x1="12" y1="9" x2="12" y2="13"></line>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3>Anomaly Detection</h3>
+                    </div>
                     <p>Establish baselines of normal operations to surface early warnings for unplanned downtime and quality issues.</p>
                 </div>
                 <div class="service-card" onclick="openModal(5)">
-                    <h3>Agentic Systems</h3>
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <path d="M12 7v4"></path>
+                                <line x1="8" y1="16" x2="8" y2="16"></line>
+                                <line x1="16" y1="16" x2="16" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3>Agentic Systems</h3>
+                    </div>
                     <p>Advanced multi-step autonomous workflows—only after solid foundations and clear success criteria are in place.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBackdrop(event)">
         <div class="modal-content">
@@ -658,7 +659,6 @@
             </div>
         </div>
     </div>
-
     <!-- Contact Form Modal -->
     <div class="modal-overlay" id="contactModal" onclick="closeModalOnBackdrop(event)">
         <div class="modal-content">
@@ -744,7 +744,6 @@
             </div>
         </div>
     </div>
-
     <section class="parallax-section expertise" id="expertise">
         <div class="parallax-bg" id="expertiseBg"></div>
         <div class="content">
@@ -792,7 +791,6 @@
             </div>
         </div>
     </section>
-
     <section class="parallax-section contact" id="contact">
         <div class="content">
             <h2>Ready to Transform Your Business?</h2>
@@ -800,34 +798,31 @@
             <a href="#" class="contact-button" onclick="openContactForm(event)">Schedule a Consultation</a>
         </div>
     </section>
-
     <footer>
         <p>&copy; 2026 TrustPoint AI. Empowering Business Through Intelligence.</p>
     </footer>
-
     <script>
         // Service data
         const serviceData = [
             {
-                // Modal(0) - Custom Software/Tool Development
                 title: "Custom Software/Tool Development",
-                subtitle: "Scoped as a concise point engagement that delivers a working tool quickly while naturally revealing opportunities in data, processes, and workflow.",
+                subtitle: "Advanced machine learning models that predict credit risk, market volatility, and fraud patterns with unprecedented accuracy.",
                 features: [
-                    "Tightly scoped point solution completed in short, iterative cycles",
-                    "Starts with a brief working session to define exactly how the tool needs to function",
-                    "Iterative interface mock-up and functionality builds with direct customer review and feedback",
-                    "Delivered as a packaged application with documentation, or full code ownership with simple hand-off",
-                    "Practical integration where single tool support is needed"
+                    "Multi-dimensional credit scoring using alternative data sources",
+                    "Real-time market volatility prediction models",
+                    "Deep learning fraud detection with 99.7% accuracy",
+                    "Portfolio risk optimization across asset classes",
+                    "Stress testing and scenario analysis automation"
                 ],
                 benefits: [
-                    "Get exactly the capability required without paying for unused features in packaged software",
-                    "Receive a working tool fast with clear ownership or an easy purchase path",
-                    "Reduce manual work or close a specific workflow gap with a purpose-built solution",
-                    "Keep risk low through fixed scope, iterative check-ins, and a defined end point rather than an open-ended build"
+                    "Reduce credit losses by up to 40%",
+                    "Identify fraudulent transactions in milliseconds",
+                    "Meet regulatory requirements with automated reporting",
+                    "Improve risk-adjusted returns across portfolios",
+                    "Scale risk assessment without additional headcount"
                 ]
             },
             {
-                // Modal(1) - Data Design & Analytics
                 title: "Data Design & Analytics",
                 subtitle: "Leverage data to automate well-defined decisions and processes",
                 features: [
@@ -840,13 +835,12 @@
                 benefits: [
                     "Builds a data foundation for effectively leveraging artificial intelligence",
                     "Visible ROI path without multi-year commitments",
-                    "Controlled 'risk—pause' or 'continue' project engagement based on real results",
+                    "Controlled risk—pause or continue project engagement based on real results",
                     "Shared engagement, not a black box",
-                    "Fixed-fee engagement that is considered 'complete' only when data insights are trusted"
+                    "Fixed-fee engagement that is considered complete only when data insights are trusted"
                 ]
             },
             {
-                // Modal(2) - Automation
                 title: "AI Assisted Automation",
                 subtitle: "Leverage data to automate well-defined decisions and processes",
                 features: [
@@ -865,7 +859,6 @@
                 ]
             },
             {
-                // Modal(3) - Workforce Augmentation
                 title: "Workforce Augmentation",
                 subtitle: "Evolve your workforce with AI tools that help them save time, explore new ideas, and support the decision-making process.",
                 features: [
@@ -884,7 +877,6 @@
                 ]
             },
             {
-                // Modal(4) - Anomaly Detection
                 title: "Anomaly Detection",
                 subtitle: "Establish baselines of normal operations and surface early warnings for equipment, quality, or process issues—key path to reduced unplanned downtime.",
                 features: [
@@ -903,7 +895,6 @@
                 ]
             },
             {
-                // Modal(5) - Agentic Systems
                 title: "Agentic Systems",
                 subtitle: "Advanced autonomous multi-step workflows—positioned carefully and only after foundations, trusted insights, and clear success criteria exist.",
                 features: [
@@ -911,7 +902,7 @@
                     "Human approval gates and override design",
                     "Tight scoping to specific, well-understood processes",
                     "Monitoring, logging, and continuous improvement loops",
-                    "Rare and selective—not the starting point **NEED TO REWORD THIS**"
+                    "Rare and selective—not the starting point"
                 ],
                 benefits: [
                     "Higher-order automation for mature operations",
@@ -922,7 +913,6 @@
                 ]
             }
         ];
-
         // Modal functions
         function openModal(index) {
             const data = serviceData[index];
@@ -950,19 +940,16 @@
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
         function closeModal() {
             const modal = document.getElementById('modalOverlay');
             modal.classList.remove('active');
             document.body.style.overflow = '';
         }
-
         function closeModalOnBackdrop(event) {
             if (event.target === document.getElementById('modalOverlay')) {
                 closeModal();
             }
         }
-
         // Close modal with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
@@ -970,7 +957,6 @@
                 closeContactModal();
             }
         });
-
         // Contact form functions
         function handleFormSubmit(event) {
             event.preventDefault();
@@ -996,7 +982,6 @@
             .then(response => response.json())
             .then(result => {
                 if (result.success === 'true' || result.success === true) {
-                    // Show your existing in-page success message
                     form.style.display = 'none';
                     document.getElementById('formSuccess').classList.add('active');
                 } else {
@@ -1010,14 +995,12 @@
                 submitBtn.textContent = originalText;
             });
         }
-
         function openContactForm(event) {
             event.preventDefault();
             const modal = document.getElementById('contactModal');
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
         function closeContactModal() {
             const modal = document.getElementById('contactModal');
             modal.classList.remove('active');
@@ -1030,7 +1013,6 @@
                 document.getElementById('formSuccess').classList.remove('active');
             }, 400);
         }
-
         // Toggle expertise details
         function toggleExpertise(element) {
             const details = element.querySelector('.expertise-details');
@@ -1053,7 +1035,6 @@
                 element.classList.add('active');
             }
         }
-
         // Parallax scrolling effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
