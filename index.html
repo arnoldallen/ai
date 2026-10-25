@@ -36,11 +36,22 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-
+        
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
             color: #60a5fa;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .logo .division {
+            font-size: 0.65rem;
+            font-weight: normal;
+            color: #e2e8f0; /* off-white */
+            margin-top: 0.15rem;
+            letter-spacing: 0.02em;
         }
 
         nav ul li a {
@@ -574,8 +585,10 @@
 <body>
     <nav>
         <ul>
-            <li class="logo">TrustPoint AI</li>
-            <li>A division of Arnold Allen LLC</li>
+            <li class="logo">
+                TrustPoint AI
+                <span class="division">A division of Arnold Allen LLC</span>
+            </li>
             <div style="display: flex;">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#expertise">Expertise</a></li>
@@ -880,7 +893,7 @@
                     "Explainable outputs for operator trust"
                 ],
                 benefits: [
-                    "Reductions in unplanned downtime,
+                    "Reductions in unplanned downtime",
                     "Lower emergency repair costs and better asset life",
                     "Earlier intervention before quality or throughput impacts",
                     "Foundation for predictive maintenance strategies",
