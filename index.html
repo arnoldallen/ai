@@ -668,9 +668,8 @@
                 <p>Tell us about your needs and we'll get back to you within 24 hours</p>
             </div>
             <div class="modal-body">
-                <form id="contactForm" action="https://formsubmit.co/bollman@arnoldallenllc.com" method="POST">
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
                     <input type="hidden" name="_subject" value="New Consultation Request – TrustPoint AI">
-                    <input type="hidden" name="_next" value="https://arnoldallen.github.io/ai/#contact">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" name="_honey" style="display:none">
                     <div class="form-row">
@@ -974,6 +973,45 @@
         });
 
         // Contact form functions
+        function handleFormSubmit(event) {
+            event.preventDefault();
+        
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+        
+            // Disable the button while sending
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+        
+            fetch('https://formsubmit.co/ajax/bollman@arnoldallenllc.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success === 'true' || result.success === true) {
+                    // Show your existing in-page success message
+                    form.style.display = 'none';
+                    document.getElementById('formSuccess').classList.add('active');
+                } else {
+                    throw new Error(result.message || 'Submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Form error:', error);
+                alert('Sorry, something went wrong. Please try again or email us directly at bollman@arnoldallenllc.com.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+        }
+
         function openContactForm(event) {
             event.preventDefault();
             const modal = document.getElementById('contactModal');
@@ -993,17 +1031,6 @@
                 document.getElementById('formSuccess').classList.remove('active');
             }, 400);
         }
-            
-            // Get form data
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
-            
-            // Log form data (in production, this would be sent to a server)
-            console.log('Form submitted:', data);
-            
-            // Show success message
-            document.getElementById('contactForm').style.display = 'none';
-            document.getElementById('formSuccess').classList.add('active');
 
         // Toggle expertise details
         function toggleExpertise(element) {
