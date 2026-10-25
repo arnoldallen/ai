@@ -668,7 +668,11 @@
                 <p>Tell us about your needs and we'll get back to you within 24 hours</p>
             </div>
             <div class="modal-body">
-                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                <form id="contactForm" action="https://formsubmit.co/bollman@arnoldallenllc.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Consultation Request – TrustPoint AI">
+                    <input type="hidden" name="_next" value="https://arnoldallen.github.io/ai/#contact">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
@@ -989,9 +993,6 @@
                 document.getElementById('formSuccess').classList.remove('active');
             }, 400);
         }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
             
             // Get form data
             const formData = new FormData(event.target);
